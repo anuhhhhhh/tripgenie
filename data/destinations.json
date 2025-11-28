@@ -1,0 +1,57 @@
+[
+    {
+        "name": "San Diego",
+        "region": "US West",
+        "approx_flight_cost": 150,
+        "stay_cost_per_night": 120,
+        "vibes": ["chill", "romantic"],
+        "min_budget": 600,
+        "activities": [
+          "La Jolla Cove kayaking",
+          "San Diego Zoo",
+          "Balboa Park museums",
+          "Pacific Beach sunset boardwalk"
+        ]
+      }
+      ,
+      {
+        "name": "Las Vegas",
+        "region": "US West",
+        "approx_flight_cost": 120,
+        "stay_cost_per_night": 100,
+        "vibes": ["party", "chill"],
+          "min_budget": 500,
+          "activities": [
+            "Bellagio fountains",
+            "Nightclubs + pool parties",
+            "The Strip casinos",
+            "Red Rock Canyon day trip"
+          ]
+      }
+      ,
+    {
+      "name": "Hawaii",
+      "region": "US",
+      "approx_flight_cost": 400,
+      "stay_cost_per_night": 250,
+      "vibes": ["adventure", "romantic"],
+      "min_budget": 2000
+    },
+    {
+        "name": "Costa Rica",
+        "region": "International",
+        "approx_flight_cost": 700,
+        "stay_cost_per_night": 180,
+        "vibes": ["adventure", "chill"],
+        "min_budget": 3000,
+        "activities": [
+          "Rainforest hikes",
+          "Ziplining through Monteverde",
+          "Hot springs in La Fortuna",
+          "Surfing at Tamarindo",
+          "Arenal Volcano day trip"
+        ]
+      }
+      
+  ]
+  
