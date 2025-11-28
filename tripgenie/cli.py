@@ -2,11 +2,16 @@ from .ai import generate_ai_itinerary
 import json
 import typer
 from pathlib import Path
+from importlib import resources
 
 def load_destinations():
-    data_path = Path(__file__).resolve().parents[1] / "data" / "destinations.json"
-    with open(data_path, "r") as f:
+    """
+    Load destinations.json from the installed tripgenie package.
+    Works both in development and when installed via pip.
+    """
+    with resources.files("tripgenie").joinpath("data/destinations.json").open("r", encoding="utf-8") as f:
         return json.load(f)
+
 
 def recommend_destination(budget, days, style):
     dests = load_destinations()

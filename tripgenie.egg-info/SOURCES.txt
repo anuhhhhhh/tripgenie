@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+tripgenie/__init__.py
+tripgenie/ai.py
+tripgenie/cli.py
+tripgenie.egg-info/PKG-INFO
+tripgenie.egg-info/SOURCES.txt
+tripgenie.egg-info/dependency_links.txt
+tripgenie.egg-info/entry_points.txt
+tripgenie.egg-info/requires.txt
+tripgenie.egg-info/top_level.txt
+tripgenie/data/destinations.json

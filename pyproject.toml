@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tripgenie"  # if this name is taken on PyPI, we can rename to "tripgenie-ai"
+version = "0.1.0"
+description = "AI-powered CLI travel planner that generates trip itineraries from your terminal."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Anush Harish" }
+]
+dependencies = [
+  "typer[all]",
+  "openai>=1.0.0",
+  "python-dotenv",
+]
+
+[project.scripts]
+tripgenie = "tripgenie.cli:main"
+
+[tool.setuptools]
+packages = ["tripgenie"]
+
+[tool.setuptools.package-data]
+tripgenie = ["data/*.json"]
+
