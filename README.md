@@ -1,8 +1,18 @@
 # ✈️ TripGenie — AI Travel Planner (CLI)
 
 TripGenie is an interactive **AI-powered travel planner** that builds complete trip itineraries from the command line.  
-Enter **any destination in the world**, get a budget breakdown, and optionally generate a **detailed multi-day itinerary** using OpenAI.
+TripGenie is an officially published **PyPI package** that lets you generate full travel itineraries directly from your terminal.
+Enter your budget, trip length, style, and destination — or let TripGenie recommend a location — and optionally generate a multi-day itinerary using OpenAI.
 
+Install globally with:
+```bash
+pip install tripgenie
+```
+
+Run from anywhere:
+```bash
+tripgenie
+```
 ---
 
 ## 🚀 Features
@@ -76,28 +86,28 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-### 🔑 Environment Variables
+### 🔑 API Requirements
 
 TripGenie uses OpenAI for generating AI itineraries.
 
-Create a .env file in the project root:
-
-```env
-OPENAI_API_KEY=your_api_key_here
+Set your API key:
+```bash
+export OPENAI_API_KEY="your_api_key"
 ```
-
-### ⚠️ Do NOT commit your .env file.
-It is already included in .gitignore.
+Or create a .env file with:
+```bash
+OPENAI_API_KEY=your_api_key
+```
 
 ### ▶️ Running TripGenie
 
 Start the CLI:
 
 ```bash
-python -m tripgenie.cli
+tripgenie
 ```
 
-Follow the interactive prompts:
+You’ll be prompted for:
 
 - Budget
 - Number of days
@@ -111,30 +121,42 @@ Follow the interactive prompts:
 ```text
 tripgenie/
 ├── tripgenie/
-│   ├── cli.py          # Main CLI logic
-│   ├── ai.py           # OpenAI itinerary generator
+│   ├── cli.py              # Main CLI logic
+│   ├── ai.py               # OpenAI itinerary generator
+│   ├── data/
+│   │   └── destinations.json
 │   └── __init__.py
-├── data/
-│   └── destinations.json
-├── .env.example
-├── .gitignore
 ├── requirements.txt
+├── pyproject.toml
 └── README.md
 ```
 
 ## 🛠 Future Enhancements
 
-- Streamlit UI
-- Export itineraries to Markdown/PDF
-- Larger destination database (+ continent packs)
-- Advanced scoring system for recommendations
-- “Surprise me” random destination mode
-- Packing lists
-- Local weather integration
-- Flight cost API integration
-- Publish as pip install tripgenie
+### 🎨 Phase 1 — Streamlit Web App (Coming Soon)
+- Beautiful browser UI
+- Form inputs for budget, destination, dates
+- Display itinerary in interactive format
+- Shareable itinerary pages
+
+### 🌐 Phase 2 — Backend API
+- Allow users to use TripGenie without needing their own OpenAI key
+- Rate-limited free tier
+- Paid tier for long itineraries
+
+### 🌍 Phase 3 — Enhanced Intelligence
+- Add 50+ curated destinations
+- Live currency conversion
+- Flight price API integration
+- Safety scores & seasonal weather insights
+- “Surprise me” random trip generator
+
+### 💼 Phase 4 — Packaging Enhancements
+- Publish tripgenie as a pip-installable Streamlit app
+- One-command desktop launcher
 
 ## 👤 Author
 
 Created by Anush Harish
 Built with Python, Typer, and OpenAI.
+Published on PyPI as an open-source travel toolkit for developers and travelers.
